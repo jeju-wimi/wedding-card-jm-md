@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>정민 & 모드 결혼식에 초대합니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="정민 & 모드의 결혼식에 초대합니다">
+<meta property="og:description" content="2026년 10월 4일 일요일, 제주">
+<meta property="og:image" content="images/photo_03.jpeg">
+
+<style>
+  :root{
+    --ivory:#FAF7EF;
+    --cream:#F1EBDC;
+    --forest:#3C4A34;
+    --forest-deep:#2A3526;
+    --sage:#8A9574;
+    --charcoal:#2E2C27;
+    --grey:#6B6A63;
+    --white:#FFFFFF;
+    --gold-mist:#C7BC9C;
+    --line:rgba(60,74,52,0.18);
+    --max-w:430px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--forest-deep);
+    color:var(--charcoal);
+    font-family:'Noto Serif KR', serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+  }
+
+  #page{
+    width:100%;
+    max-width:var(--max-w);
+    background:var(--ivory);
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,0.35);
+  }
+
+  .eng-italic{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    letter-spacing:0.02em;
+  }
+  .eng-serif{
+    font-family:'Playfair Display', serif;
+  }
+
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin:0 auto;
+    width:70%;
+    opacity:0.75;
+  }
+  .divider .l, .divider .r{
+    height:1px;
+    flex:1;
+    background:linear-gradient(90deg, transparent, var(--gold-mist));
+  }
+  .divider .r{
+    background:linear-gradient(90deg, var(--gold-mist), transparent);
+  }
+  .divider .mark{
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--sage);
+    flex-shrink:0;
+  }
+
+  /* ============ 1. KEY VISUAL HEADER ============ */
+  .hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    min-height:100svh;
+    background-image:
+      linear-gradient(180deg, rgba(20,28,16,0.35) 0%, rgba(18,24,14,0.15) 40%, rgba(14,18,10,0.85) 100%),
+      url('images/photo_03.jpeg');
+    background-size:cover;
+    background-position:49% center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding:42px 30px 56px;
+    text-align:center;
+    color:var(--ivory);
+  }
+
+  .hero-header-top{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:10px;
+  }
+
+  .hero-top-date{
+    letter-spacing:0.35em;
+    font-size:11px;
+    font-family:'Cormorant Garamond', serif;
+    text-transform:uppercase;
+    opacity:0.85;
+    margin-bottom:12px;
+  }
+
+  .hero-getting{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:32px;
+    letter-spacing:0.02em;
+    line-height:1.1;
+  }
+
+  .hero-names{
+    margin-top:8px;
+    font-family:'Playfair Display', serif;
+    font-size:12px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    opacity:0.9;
+  }
+
+  .hero-header-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-kr{
+    font-family:'Noto Serif KR', serif;
+    font-weight:400;
+    font-size:18.5px;
+    line-height:1.65;
+    letter-spacing:0.01em;
+    margin-bottom:12px;
+    text-shadow:0 2px 18px rgba(0,0,0,0.4);
+  }
+
+  .hero-fr{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:14px;
+    line-height:1.6;
+    max-width:300px;
+    opacity:0.92;
+    margin-bottom:12px;
+    text-shadow:0 2px 14px rgba(0,0,0,0.35);
+  }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:16px; left:50%;
+    transform:translateX(-50%);
+    width:1px;
+    height:30px;
+    background:linear-gradient(180deg, rgba(250,247,239,0.9), transparent);
+    animation:scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse{
+    0%,100%{opacity:0.3; height:20px;}
+    50%{opacity:1; height:30px;}
+  }
+
+  /* ============ SECTION SHARED ============ */
+  section{
+    padding:64px 32px;
+    position:relative;
+  }
+  .eyebrow{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--sage);
+    font-size:13px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .sec-title{
+    text-align:center;
+    font-family:'Noto Serif KR', serif;
+    font-weight:600;
+    font-size:24px;
+    color:var(--forest);
+    margin-bottom:16px;
+    letter-spacing:0.01em;
+  }
+
+  /* ============ 2. INTRO + INFO ============ */
+  .intro-section{
+    background:var(--ivory);
+    text-align:center;
+    padding-bottom:32px;
+  }
+  .intro-lead{
+    font-family:'Noto Serif KR', serif;
+    font-weight:500;
+    font-size:20px;
+    color:var(--forest);
+    margin-bottom:20px;
+    letter-spacing:0.02em;
+  }
+  .intro-body{
+    font-size:14.5px;
+    line-height:2.05;
+    color:var(--grey);
+    font-weight:300;
+    margin-bottom:36px;
+    word-break:keep-all;
+  }
+
+  .info-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:30px 24px;
+    box-shadow:0 18px 40px -28px rgba(42,53,38,0.45);
+  }
+  .info-row{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    padding:16px 0;
+  }
+  .info-row + .info-row{
+    border-top:1px solid var(--line);
+  }
+  .info-label{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--sage);
+  }
+  .info-value{
+    font-family:'Noto Serif KR', serif;
+    font-size:15.5px;
+    font-weight:500;
+    color:var(--charcoal);
+    line-height:1.55;
+  }
+  .info-value small{
+    display:block;
+    font-family:'Noto Serif KR', serif;
+    font-weight:300;
+    font-size:12.5px;
+    color:var(--grey);
+    margin-top:3px;
+  }
+
+  /* ============ RSVP LINK BUTTON ============ */
+  .rsvp-section{
+    background:var(--ivory);
+    padding-top:32px;
+    text-align:center;
+  }
+  .rsvp-desc{
+    font-size:14px;
+    line-height:1.8;
+    color:var(--grey);
+    margin-bottom:24px;
+    word-break:keep-all;
+  }
+  .link-btn{
+    display:block;
+    width:100%;
+    margin-top:14px;
+    padding:18px;
+    background:var(--forest);
+    color:var(--ivory);
+    text-decoration:none;
+    text-align:center;
+    border-radius:2px;
+    font-family:'Playfair Display', serif;
+    font-size:15px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    box-shadow:0 6px 20px rgba(60,74,52,0.25);
+    transition:background 0.25s ease, transform 0.12s ease, box-shadow 0.25s ease;
+    animation: rsvpPulse 2s infinite ease-in-out;
+  }
+  @keyframes rsvpPulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 6px 20px rgba(60,74,52,0.25);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 10px 28px rgba(60,74,52,0.45);
+      background: #46563e;
+    }
+  }
+  .link-btn:active{
+    transform:scale(0.98);
+    background:var(--forest-deep);
+    box-shadow:0 2px 8px rgba(60,74,52,0.2);
+  }
+
+  /* ============ 3. GALLERY ============ */
+  .gallery-section{
+    background:var(--cream);
+  }
+  .gallery-main{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    border-radius:2px;
+    background:#1b2018;
+    box-shadow:0 22px 46px -26px rgba(42,53,38,0.5);
+    cursor:pointer;
+  }
+
+  .gitem{
+    position:absolute;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+  }
+  .gitem.active{
+    display:flex;
+  }
+
+  .gitem-blur-bg{
+    position:absolute;
+    inset:-10px;
+    background-size:cover;
+    background-position:center;
+    filter:blur(16px) brightness(0.65);
+    transform:scale(1.1);
+    z-index:0;
+  }
+
+  .gitem img{
+    position:relative;
+    z-index:1;
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .gallery-caption{
+    position:absolute;
+    left:16px; bottom:14px;
+    color:var(--ivory);
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
+    z-index:3;
+    pointer-events:none;
+  }
+
+  .thumb-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:8px;
+    margin-top:10px;
+  }
+  .thumb{
+    position:relative;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    border-radius:2px;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    border:1.5px solid transparent;
+  }
+  .thumb img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:brightness(0.75);
+    pointer-events:none;
+  }
+  .thumb.active{
+    border-color:var(--forest);
+  }
+  .thumb.active img{
+    filter:brightness(1);
+  }
+
+  /* ============ 4. LETTER ============ */
+  .letter-section{
+    background:var(--forest);
+    color:var(--ivory);
+  }
+  .letter-section .eyebrow{ color:var(--gold-mist); }
+  .letter-section .sec-title{ color:var(--ivory); }
+
+  .letter-paper{
+    background:rgba(250,247,239,0.04);
+    border:1px solid rgba(250,247,239,0.22);
+    border-radius:2px;
+    padding:34px 24px;
+    position:relative;
+    text-align:center;
+  }
+  .letter-paper::before{
+    content:"";
+    position:absolute;
+    top:14px; left:14px; right:14px; bottom:14px;
+    border:1px solid rgba(250,247,239,0.14);
+    pointer-events:none;
+  }
+
+  .letter-fr{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:16px;
+    line-height:1.9;
+    color:rgba(250,247,239,0.92);
+    margin-bottom:28px;
+    text-align:center;
+  }
+  .letter-fr p{ margin-bottom:18px; }
+  .letter-fr p:last-child{ margin-bottom:0; }
+
+  .letter-divider{
+    width:38px;
+    height:1px;
+    background:var(--gold-mist);
+    margin:26px auto;
+    opacity:0.6;
+  }
+
+  .letter-kr{
+    font-family:'Noto Serif KR', serif;
+    font-weight:300;
+    font-size:14px;
+    line-height:2.0;
+    color:rgba(250,247,239,0.85);
+    word-break:keep-all;
+    text-align:center;
+  }
+  .letter-kr p{ margin-bottom:18px; }
+  .letter-kr p:last-child{ margin-bottom:0; }
+
+  .letter-sign{
+    margin-top:28px;
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:14px;
+    color:var(--gold-mist);
+    letter-spacing:0.05em;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer{
+    background:var(--forest-deep);
+    color:rgba(250,247,239,0.6);
+    text-align:center;
+    padding:46px 32px 54px;
+  }
+  .footer .eng-italic{
+    font-size:18px;
+    color:var(--ivory);
+    display:block;
+    margin-bottom:8px;
+  }
+  .footer .foot-date{
+    font-size:11.5px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    font-family:'Cormorant Garamond', serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="page">
+
+  <!-- ============ 1. KEY VISUAL HEADER ============ -->
+  <header class="hero">
+    <div class="hero-header-top">
+      <div class="hero-top-date">Jeju, 2026</div>
+      <div class="hero-getting eng-italic">We are getting married</div>
+      <div class="hero-names">Jeongmin &amp; Maud</div>
+    </div>
+
+    <div class="hero-header-bottom">
+      <div class="hero-kr">정민 &amp; 모드의 결혼식에 초대합니다.</div>
+      <div class="hero-fr">Vous êtes cordialement invités au mariage de<br>Jeongmin &amp; Maud.</div>
+    </div>
+    
+    <div class="scroll-cue"></div>
+  </header>
+
+  <!-- ============ 2. 안내 문구 & 예식 정보 ============ -->
+  <section class="intro-section">
+    <div class="eyebrow eng-italic">Invitation</div>
+    <p class="intro-lead">우리 결혼합니다.</p>
+    <p class="intro-body">
+      저희의 새로운 시작을 함께 축하해 주셔서 감사합니다.<br>
+      결혼식은 진행하지 않는 피로연(잔치)입니다.<br>
+      참석 여부를 미리 알려주시면 최선을 다해 손님 여러분을 맞이하겠습니다.
+    </p>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label eng-italic">Date</span>
+        <span class="info-value">2026년 10월 4일 일요일</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label eng-italic">Venue</span>
+        <span class="info-value">한라흑돼지
+          <small>제주특별자치도 서귀포시 남원읍 태위로 56</small>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. RSVP LINK ============ -->
+  <section class="rsvp-section">
+    <div class="eyebrow eng-italic">RSVP</div>
+    <h2 class="sec-title">참석 여부 전달하기</h2>
+    <p class="rsvp-desc">결혼식은 진행하지 않는 피로연(잔치)입니다.<br>참석 여부를 미리 알려주시면 감사하겠습니다.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5MXTDdU-eV6LJjLQw8fy2dfIvI4x0vebHydleT5jiuefJhw/viewform?usp=header" class="link-btn" target="_blank">참석 여부 작성하기</a>
+  </section>
+
+  <!-- ============ 4. WEDDING GALLERY ============ -->
+  <section class="gallery-section">
+    <div class="eyebrow eng-italic">Our Story</div>
+    <h2 class="sec-title">웨딩 갤러리</h2>
+
+    <div class="gallery-main" id="galleryMain">
+      <div class="gitem active" data-index="0">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_01.jpeg');"></div>
+        <img src="images/photo_01.jpeg" alt="wedding photo 1">
+      </div>
+      <div class="gitem" data-index="1">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_02.jpeg');"></div>
+        <img src="images/photo_02.jpeg" alt="wedding photo 2">
+      </div>
+      <div class="gitem" data-index="2">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_03.jpeg');"></div>
+        <img src="images/photo_03.jpeg" alt="wedding photo 3">
+      </div>
+      <div class="gitem" data-index="3">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_04.jpeg');"></div>
+        <img src="images/photo_04.jpeg" alt="wedding photo 4">
+      </div>
+      <div class="gitem" data-index="4">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_05.jpeg');"></div>
+        <img src="images/photo_05.jpeg" alt="wedding photo 5">
+      </div>
+      <div class="gitem" data-index="5">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_06.jpeg');"></div>
+        <img src="images/photo_06.jpeg" alt="wedding photo 6">
+      </div>
+      <div class="gitem" data-index="6">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_07.jpeg');"></div>
+        <img src="images/photo_07.jpeg" alt="wedding photo 7">
+      </div>
+      <div class="gitem" data-index="7">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_08.jpeg');"></div>
+        <img src="images/photo_08.jpeg" alt="wedding photo 8">
+      </div>
+      <div class="gitem" data-index="8">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_09.jpeg');"></div>
+        <img src="images/photo_09.jpeg" alt="wedding photo 9">
+      </div>
+      <div class="gitem" data-index="9">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_10.jpeg');"></div>
+        <img src="images/photo_10.jpeg" alt="wedding photo 10">
+      </div>
+      <div class="gitem" data-index="10">
+        <div class="gitem-blur-bg" style="background-image:url('images/photo_11.jpeg');"></div>
+        <img src="images/photo_11.jpeg" alt="wedding photo 11">
+      </div>
+      <span class="gallery-caption eng-italic" id="galleryCaption">01 / 11</span>
+    </div>
+
+    <div class="thumb-grid" id="thumbGrid">
+      <div class="thumb active" data-index="0"><img src="images/photo_01.jpeg" alt="thumb 1"></div>
+      <div class="thumb" data-index="1"><img src="images/photo_02.jpeg" alt="thumb 2"></div>
+      <div class="thumb" data-index="2"><img src="images/photo_03.jpeg" alt="thumb 3"></div>
+      <div class="thumb" data-index="3"><img src="images/photo_04.jpeg" alt="thumb 4"></div>
+      <div class="thumb" data-index="4"><img src="images/photo_05.jpeg" alt="thumb 5"></div>
+      <div class="thumb" data-index="5"><img src="images/photo_06.jpeg" alt="thumb 6"></div>
+      <div class="thumb" data-index="6"><img src="images/photo_07.jpeg" alt="thumb 7"></div>
+      <div class="thumb" data-index="7"><img src="images/photo_08.jpeg" alt="thumb 8"></div>
+      <div class="thumb" data-index="8"><img src="images/photo_09.jpeg" alt="thumb 9"></div>
+      <div class="thumb" data-index="9"><img src="images/photo_10.jpeg" alt="thumb 10"></div>
+      <div class="thumb" data-index="10"><img src="images/photo_11.jpeg" alt="thumb 11"></div>
+    </div>
+  </section>
+
+  <!-- ============ 5. LETTER ============ -->
+  <section class="letter-section">
+    <div class="divider"><span class="l"></span><span class="mark"></span><span class="r"></span></div>
+    <div class="eyebrow eng-italic" style="margin-top:24px;">A Letter</div>
+    <h2 class="sec-title">신부의 편지</h2>
+
+    <div class="letter-paper">
+      <div class="letter-fr">
+        <p>Deux horizons, deux histoires, deux chemins qui un jour se sont rencontrés.</p>
+        <p>Au fil du temps, une évidence est née : celle d'avancer ensemble, de mêler nos rêves, nos cultures et nos souvenirs pour écrire une histoire qui nous ressemble.</p>
+        <p>Entre la douceur d'un héritage français et la beauté d'une âme coréenne, notre amour a trouvé son propre langage, celui du cœur.</p>
+        <p>Aujourd'hui, nous avons choisi de nous unir et de célébrer cette promesse faite à deux. Nous serions profondément honorés de vous avoir à nos côtés pour partager ce moment si précieux.</p>
+      </div>
+
+      <div class="letter-divider"></div>
+
+      <div class="letter-kr">
+        <p>두 개의 지평, 두 개의 이야기, 언젠가 서로 만나게 된 두 개의 길.</p>
+        <p>시간이 흐르며 하나의 확신이 생겼습니다. 함께 나아가고, 우리의 꿈과 문화, 그리고 추억을 하나로 엮어 우리만의 이야기를 써 내려가고 싶다는 확신이었습니다.</p>
+        <p>프랑스의 부드러운 유산과 한국의 아름다운 영혼 사이에서, 우리의 사랑은 마음이라는 이름의 언어를 찾았습니다.</p>
+        <p>오늘 우리는 서로에게 맺은 이 약속을 지키며 하나가 되기로 했습니다. 이 소중한 순간에 여러분을 모실 수 있다면 더없이 큰 영광이겠습니다.</p>
+        <p>우리의 가족과 전통, 그리고 이야기가 하나의 감동 속에 어우러지는 이 날이, 사랑으로 써 내려갈 새로운 장의 첫 숨결이 되길 바랍니다.</p>
+      </div>
+
+      <div class="letter-sign">진심을 담아, Maud &amp; Jeongmin</div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span class="eng-italic">Jeongmin &amp; Maud</span>
+    <span class="foot-date">2026 . 10 . 04 — Jeju Island</span>
+  </footer>
+
+</div>
+
+<script>
+  // Gallery
+  (function(){
+    const gitems = Array.from(document.querySelectorAll('.gitem'));
+    const thumbs = Array.from(document.querySelectorAll('.thumb'));
+    const galleryMain = document.getElementById('galleryMain');
+    const caption = document.getElementById('galleryCaption');
+    const total = gitems.length;
+    let current = 0;
+
+    function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+    function goTo(index){
+      current = (index + total) % total;
+      for (let i = 0; i < total; i++) {
+        if (i === current) {
+          gitems[i].classList.add('active');
+          thumbs[i].classList.add('active');
+        } else {
+          gitems[i].classList.remove('active');
+          thumbs[i].classList.remove('active');
+        }
+      }
+      caption.textContent = pad(current + 1) + ' / ' + pad(total);
+    }
+
+    galleryMain.addEventListener('click', function() {
+      goTo(current + 1);
+    });
+
+    thumbs.forEach(t => {
+      t.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const idx = Number(this.dataset.index);
+        goTo(idx);
+      });
+    });
+
+    goTo(0);
+  })();
+</script>
+
+</body>
+</html>
