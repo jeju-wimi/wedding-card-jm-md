@@ -651,7 +651,7 @@
     function pad(n){ return n < 10 ? '0' + n : '' + n; }
 
     function goTo(index){
-      current = (index + total) + total % total;
+      current = (index % total + total) % total;
       for (let i = 0; i < total; i++) {
         if (i === current) {
           gitems[i].classList.add('active');
